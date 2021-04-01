@@ -1,5 +1,18 @@
-<?php 
-	echo "Method not allowed";
+const http = require('http');
+
+http.createServer((req, res) =>{
+    res.writeHead(200,{'content-type' : 'text/plain'});
+    
+    res.end(`el resultado es`);
+
+
+}).listen(3000);
+
+console.log(`el resultado es ${cas}`);
+
+
+
+
 
 
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
@@ -12,4 +25,3 @@
 ></df-messenger>
 
 
-?>
