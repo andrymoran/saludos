@@ -1,41 +1,14 @@
 <?php 
-
-$method = $_SERVER['REQUEST_METHOD'];
-
-// Process only when method is POST
-if($method == 'POST'){
-	$requestBody = file_get_contents('php://input');
-	$json = json_decode($requestBody);
-
-	$text = $json->result->parameters->text;
-
-	switch ($text) {
-		case 'hi':
-			$speech = "Hi, Nice to meet you";
-			break;
-
-		case 'bye':
-			$speech = "Bye, good night";
-			break;
-
-		case 'anything':
-			$speech = "Yes, you can type anything here.";
-			break;
-		
-		default:
-			$speech = "Sorry, I didnt get that. Please ask me something else.";
-			break;
-	}
-
-	$response = new \stdClass();
-	$response->speech = "";
-	$response->displayText = "";
-	$response->source = "webhook";
-	echo json_encode($response);
-}
-else
-{
 	echo "Method not allowed";
-}
+
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+<df-messenger
+  df-cx="true"
+  location="us-central1"
+  chat-title="Itau"
+  agent-id="54fa59d5-18b5-4e58-b4e5-3ffdaf1cd82e"
+  language-code="es"
+></df-messenger>
 
 ?>
