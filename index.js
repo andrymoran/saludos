@@ -8,11 +8,11 @@ http.createServer((req, res) =>{
 
 }).listen(3000);
 
-console.log(`el resultado es ${cas}`);
 
 
 
 
+/*
 
 
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
@@ -25,3 +25,4 @@ console.log(`el resultado es ${cas}`);
 ></df-messenger>
 
 
+*/
